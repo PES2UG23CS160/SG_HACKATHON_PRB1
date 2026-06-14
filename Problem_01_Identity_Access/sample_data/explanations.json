@@ -1,0 +1,1267 @@
+{
+  "generated_at": "2026-06-13T16:35:54.183875",
+  "user_explanations": [
+    {
+      "user_id": "USR00012",
+      "username": "vikram.white",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ACCOUNT",
+          "details": "Account has been inactive for 25 days",
+          "severity": "MEDIUM",
+          "recommendation": "Review account status and consider deprovisioning"
+        },
+        {
+          "finding": "ORPHANED_ACCOUNT",
+          "details": "Account is orphaned with no clear owner or manager",
+          "severity": "HIGH",
+          "recommendation": "Assign a new owner or manager to the account"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "SIEM",
+          "Azure_AD"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential disruption to operations and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Deprovision the account",
+        "Assign a new owner or manager"
+      ],
+      "next_escalation": "Escalate to IT management for review and approval"
+    },
+    {
+      "user_id": "USR00015",
+      "username": "sophia.white",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN",
+          "details": "Admin account inactive for 163 days",
+          "severity": "HIGH",
+          "recommendation": "Review and update admin account status to ensure it is not being used maliciously"
+        },
+        {
+          "finding": "EXCESSIVE_PRIVILEGES",
+          "details": "Access to 7 systems including Okta, SIEM, Azure_AD, ServiceNow, AWS_IAM, VPN, and ADMIN_SYS",
+          "severity": "MEDIUM",
+          "recommendation": "Review and limit access to only necessary systems for the user's role"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "Okta",
+          "SIEM",
+          "Azure_AD",
+          "ServiceNow",
+          "AWS_IAM",
+          "VPN",
+          "ADMIN_SYS"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.95,
+      "suggested_actions": [
+        "Review and update admin account status",
+        "Limit access to necessary systems",
+        "Conduct a thorough security audit"
+      ],
+      "next_escalation": "Escalate to CISO for further review and action"
+    },
+    {
+      "user_id": "USR00058",
+      "username": "anthony.taylor",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "INACTIVE_ACCOUNT",
+          "details": "User account has been inactive for 51 days",
+          "severity": "HIGH",
+          "recommendation": "Immediately remove access to all systems and conduct a thorough review of account activity"
+        },
+        {
+          "finding": "ORPHANED_ACCOUNT",
+          "details": "User account is orphaned, indicating a potential lack of ownership or oversight",
+          "severity": "MEDIUM",
+          "recommendation": "Assign a new owner or manager to the account and review access permissions"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "AD"
+        ],
+        "estimated_records_exposed": 1000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.9,
+      "suggested_actions": [
+        "Remove access to all systems",
+        "Conduct a thorough review of account activity",
+        "Assign a new owner or manager to the account"
+      ],
+      "next_escalation": "Escalate to CISO and IT management for further review and action"
+    },
+    {
+      "user_id": "USR00027",
+      "username": "pooja.sullivan",
+      "risk_score": 120.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN",
+          "details": "Admin account has been inactive for 112 days",
+          "severity": "HIGH",
+          "recommendation": "Immediately review and validate the account's current access needs"
+        },
+        {
+          "finding": "EXCESSIVE_SYSTEM_ACCESS",
+          "details": "User has access to 7 systems, including sensitive systems like ADMIN_SYS and SIEM",
+          "severity": "MEDIUM",
+          "recommendation": "Review and limit access to only necessary systems"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "Salesforce",
+          "AWS_IAM",
+          "ADMIN_SYS",
+          "SIEM",
+          "Azure_AD",
+          "ServiceNow"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.9,
+      "suggested_actions": [
+        "Conduct a thorough review of the user's access",
+        "Limit access to only necessary systems",
+        "Monitor the user's activity closely"
+      ],
+      "next_escalation": "Escalate to CISO for further review and action"
+    },
+    {
+      "user_id": "USR00155",
+      "username": "varun.colombo",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ACCOUNT",
+          "details": "Account has been inactive for 35 days",
+          "severity": "MEDIUM",
+          "recommendation": "Review and remove access if no longer needed"
+        },
+        {
+          "finding": "ORPHANED_ACCOUNT",
+          "details": "Account is orphaned with no clear ownership",
+          "severity": "HIGH",
+          "recommendation": "Assign ownership or remove access"
+        },
+        {
+          "finding": "MULTIPLE_SYSTEMS_ACCESS",
+          "details": "Account has access to 6 systems, including Azure_AD, AWS_IAM, ServiceNow, Okta, VPN, and EMAIL",
+          "severity": "LOW",
+          "recommendation": "Review access and remove any unnecessary privileges"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "Azure_AD",
+          "AWS_IAM",
+          "ServiceNow",
+          "Okta",
+          "VPN",
+          "EMAIL"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review and remove access if no longer needed",
+        "Assign ownership or remove access",
+        "Review access and remove any unnecessary privileges"
+      ],
+      "next_escalation": "Escalate to IT management for further review and action"
+    },
+    {
+      "user_id": "USR00294",
+      "username": "kenneth.colombo",
+      "risk_score": 80.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "ORPHANED_ACCOUNT",
+          "details": "Account has been inactive for 11 days and is orphaned, indicating a potential lack of ownership or oversight",
+          "severity": "MEDIUM",
+          "recommendation": "Assign ownership to a department manager or IT representative to ensure proper account management"
+        },
+        {
+          "finding": "INACTIVE_ACCOUNT",
+          "details": "Account has been inactive for 11 days, which may indicate a security risk if the account is not properly secured or monitored",
+          "severity": "LOW",
+          "recommendation": "Verify the account status and consider deactivating or deleting the account if it is no longer needed"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "AD"
+        ],
+        "estimated_records_exposed": 1000,
+        "gdpr_fine_exposure": "\u20ac500,000 or 2% revenue",
+        "business_impact": "Potential data breach or unauthorized access to sensitive information"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Investigate account activity prior to inactivity",
+        "Verify account ownership and access controls"
+      ],
+      "next_escalation": "Escalate to IT management for further review and action"
+    },
+    {
+      "user_id": "USR00057",
+      "username": "zainab.jo",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN",
+          "details": "Admin account has been inactive for 132 days",
+          "severity": "HIGH",
+          "recommendation": "Review and update admin account status to ensure alignment with current role and responsibilities"
+        },
+        {
+          "finding": "EXCESSIVE_PRIVILEGES",
+          "details": "User has access to 4 systems, including GCP, ADMIN_SYS, AD, and SIEM",
+          "severity": "MEDIUM",
+          "recommendation": "Review and limit system access to only necessary systems for the user's role and responsibilities"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "GCP",
+          "ADMIN_SYS",
+          "AD",
+          "SIEM"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review and update admin account status",
+        "Limit system access to necessary systems"
+      ],
+      "next_escalation": "Escalate to CISO for further review and action"
+    },
+    {
+      "user_id": "USR00044",
+      "username": "pooja.mishra",
+      "risk_score": 150.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN",
+          "details": "The admin account has been inactive for 167 days, which is a significant security risk",
+          "severity": "HIGH",
+          "recommendation": "Immediately review and update the account status, and consider revoking admin privileges if the account is no longer needed"
+        },
+        {
+          "finding": "EXCESSIVE_PRIVILEGES",
+          "details": "The user has access to 5 systems, including sensitive systems such as EMAIL, SIEM, and ADMIN_SYS",
+          "severity": "MEDIUM",
+          "recommendation": "Review the user's job requirements and revoke access to any systems that are not necessary for their role"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "EMAIL",
+          "SIEM",
+          "ADMIN_SYS",
+          "Salesforce",
+          "Azure_AD"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.9,
+      "suggested_actions": [
+        "Revoke admin privileges",
+        "Conduct a thorough review of user access",
+        "Implement additional security controls"
+      ],
+      "next_escalation": "Escalate to CISO for further review and action"
+    },
+    {
+      "user_id": "USR00074",
+      "username": "mark.he",
+      "risk_score": 80.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "OVERPRIVILEGED_ACCESS",
+          "details": "User has access to 2 systems (SIEM and AWS_IAM) with a privilege level of 'user', which may be excessive for their role as a Security Officer",
+          "severity": "HIGH",
+          "recommendation": "Review and adjust user privileges to align with the principle of least privilege, as per NIST AC-2 and GDPR Article 32"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "SIEM",
+          "AWS_IAM"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential unauthorized access to sensitive security information and cloud infrastructure"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.9,
+      "suggested_actions": [
+        "Conduct a thorough review of user access and privileges",
+        "Implement additional monitoring and logging for sensitive systems"
+      ],
+      "next_escalation": "Escalate to the CISO for further review and approval of recommended actions"
+    },
+    {
+      "user_id": "USR00068",
+      "username": "robert.patel",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN",
+          "details": "Account has been inactive for 121 days, despite being an admin account",
+          "severity": "MEDIUM",
+          "recommendation": "Review account activity and consider revoking admin privileges if not necessary"
+        },
+        {
+          "finding": "EXCESSIVE_SYSTEM_ACCESS",
+          "details": "User has access to 5 systems, including ADMIN_SYS, PROD_DB, AWS_IAM, Salesforce, and EMAIL",
+          "severity": "LOW",
+          "recommendation": "Review system access and remove any unnecessary access"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "ADMIN_SYS",
+          "PROD_DB",
+          "AWS_IAM",
+          "Salesforce",
+          "EMAIL"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac10 million or 2% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review account activity and system access",
+        "Consider revoking admin privileges"
+      ],
+      "next_escalation": "Escalate to CISO for further review and action"
+    },
+    {
+      "user_id": "USR00067",
+      "username": "donald.wang",
+      "risk_score": 120.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "INACTIVE_ACCOUNT",
+          "details": "Account has been inactive for 54 days",
+          "severity": "MEDIUM",
+          "recommendation": "Review and verify account activity to ensure it is still necessary"
+        },
+        {
+          "finding": "OVERPRIVILEGED",
+          "details": "User has access to 2 systems (PROD_DB and ADMIN_SYS) with a privilege level of user",
+          "severity": "HIGH",
+          "recommendation": "Re-evaluate user's access and remove any unnecessary privileges"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "PROD_DB",
+          "ADMIN_SYS"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review user's access and privileges",
+        "Verify account activity and consider deactivation"
+      ],
+      "next_escalation": "Escalate to IT management for further review and action"
+    },
+    {
+      "user_id": "USR00063",
+      "username": "daniel.colombo",
+      "risk_score": 95.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "INACTIVE_ACCOUNT",
+          "details": "Account has been inactive for 52 days",
+          "severity": "HIGH",
+          "recommendation": "Immediately revoke access and remove from all systems"
+        },
+        {
+          "finding": "ORPHANED_ACCOUNT",
+          "details": "Account is orphaned with no clear ownership or management",
+          "severity": "MEDIUM",
+          "recommendation": "Assign ownership to a department manager or IT representative"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "GCP",
+          "VPN"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.9,
+      "suggested_actions": [
+        "Revoke access",
+        "Remove from systems",
+        "Assign ownership"
+      ],
+      "next_escalation": "Escalate to IT management and department head for review and action"
+    },
+    {
+      "user_id": "USR00078",
+      "username": "christopher.menon",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "ORPHANED_ACCOUNT",
+          "details": "The account has been inactive for 22 days and is marked as inactive, with the user being an officer in the Executive department, hired on 2023-01-02",
+          "severity": "HIGH",
+          "recommendation": "Immediately review and remove or reassign the account to prevent unauthorized access"
+        },
+        {
+          "finding": "SERVICE_ACCOUNT_INACTIVE",
+          "details": "The service account has been inactive for 22 days, which may indicate a lack of maintenance or oversight",
+          "severity": "MEDIUM",
+          "recommendation": "Schedule a review of service accounts to ensure they are properly maintained and monitored"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "Azure_AD"
+        ],
+        "estimated_records_exposed": 1000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Remove or reassign the orphaned account",
+        "Review and update service account maintenance procedures"
+      ],
+      "next_escalation": "Escalate to the CISO for further review and approval of account removal or reassignment"
+    },
+    {
+      "user_id": "USR00082",
+      "username": "arjun.hwang",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN",
+          "details": "Admin account has been inactive for 81 days",
+          "severity": "HIGH",
+          "recommendation": "Review and verify the account status, and consider revoking admin privileges if not needed"
+        },
+        {
+          "finding": "MULTIPLE_SYSTEMS_ACCESS",
+          "details": "User has access to 5 systems, including PROD_DB, Okta, VPN, AD, and GCP",
+          "severity": "MEDIUM",
+          "recommendation": "Review user's job requirements and ensure access is limited to necessary systems"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "PROD_DB",
+          "Okta",
+          "VPN",
+          "AD",
+          "GCP"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review and verify account status",
+        "Limit access to necessary systems",
+        "Monitor user activity"
+      ],
+      "next_escalation": "Escalate to CISO for further review and action"
+    },
+    {
+      "user_id": "USR00088",
+      "username": "william.jang",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN_ACCOUNT",
+          "details": "Admin account inactive for 143 days",
+          "severity": "HIGH",
+          "recommendation": "Review and remove admin privileges if account is no longer needed"
+        },
+        {
+          "finding": "EXCESSIVE_SYSTEMS_ACCESS",
+          "details": "Access to 5 systems (ServiceNow, VPN, EMAIL, AD, AWS_IAM) with admin privileges",
+          "severity": "MEDIUM",
+          "recommendation": "Review and limit access to only necessary systems"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "ServiceNow",
+          "VPN",
+          "EMAIL",
+          "AD",
+          "AWS_IAM"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review account activity and access",
+        "Remove unnecessary admin privileges",
+        "Limit access to sensitive systems"
+      ],
+      "next_escalation": "Escalate to IT management for further review and action"
+    },
+    {
+      "user_id": "USR00236",
+      "username": "harsh.connor",
+      "risk_score": 120.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "INACTIVE_FOR_EXTENDED_PERIOD",
+          "details": "The account has been inactive for 40 days, which may indicate a potential security risk",
+          "severity": "MEDIUM",
+          "recommendation": "Review and verify the account's access and privileges to ensure they are still necessary"
+        },
+        {
+          "finding": "OVERPRIVILEGED_ACCOUNT",
+          "details": "The account has access to 2 systems (PROD_DB and ADMIN_SYS) with a service-account privilege level, which may be excessive for a Director in the Legal department",
+          "severity": "HIGH",
+          "recommendation": "Re-evaluate the account's access and privileges to ensure they align with the principle of least privilege"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "PROD_DB",
+          "ADMIN_SYS"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac10 million or 2% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Conduct a thorough review of the account's access and privileges",
+        "Implement additional monitoring and logging for the account"
+      ],
+      "next_escalation": "Escalate to the CISO for further review and action within the next 72 hours"
+    },
+    {
+      "user_id": "USR00125",
+      "username": "kenneth.verma",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN",
+          "details": "The admin account has been inactive for 177 days",
+          "severity": "HIGH",
+          "recommendation": "Immediately review and verify the account's access and privileges"
+        },
+        {
+          "finding": "EXCESSIVE_SYSTEM_ACCESS",
+          "details": "The user has access to 6 systems, including SIEM, AWS_IAM, Azure_AD, EMAIL, Okta, and GCP",
+          "severity": "MEDIUM",
+          "recommendation": "Review and limit access to only necessary systems"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "SIEM",
+          "AWS_IAM",
+          "Azure_AD",
+          "EMAIL",
+          "Okta",
+          "GCP"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review and update account access",
+        "Limit system privileges",
+        "Conduct a thorough security audit"
+      ],
+      "next_escalation": "Escalate to CISO for further review and action"
+    },
+    {
+      "user_id": "USR00129",
+      "username": "sanjana.burke",
+      "risk_score": 80.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ACCOUNT",
+          "details": "Account has been inactive for 17 days",
+          "severity": "MEDIUM",
+          "recommendation": "Review and remove or re-enable the account to prevent potential unauthorized access"
+        },
+        {
+          "finding": "ORPHANED_ACCOUNT",
+          "details": "Account is orphaned, indicating a potential lack of ownership or oversight",
+          "severity": "HIGH",
+          "recommendation": "Assign a new owner or manager to the account to ensure proper oversight and access control"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "PROD_DB"
+        ],
+        "estimated_records_exposed": 10000,
+        "gdpr_fine_exposure": "\u20ac10 million or 2% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review and update access controls",
+        "Assign a new owner or manager to the account"
+      ],
+      "next_escalation": "Escalate to IT management for further review and action"
+    },
+    {
+      "user_id": "USR00140",
+      "username": "riya.lim",
+      "risk_score": 85.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "INACTIVE_ACCOUNT",
+          "details": "Account has been inactive for 35 days",
+          "severity": "MEDIUM",
+          "recommendation": "Review and remove or re-enable the account to prevent potential unauthorized access"
+        },
+        {
+          "finding": "ORPHANED_ACCOUNT",
+          "details": "Account is orphaned, indicating a potential lack of ownership or oversight",
+          "severity": "HIGH",
+          "recommendation": "Assign ownership of the account to a responsible individual or department"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "EMAIL",
+          "Azure_AD"
+        ],
+        "estimated_records_exposed": 500,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.8,
+      "suggested_actions": [
+        "Review account status and ownership",
+        "Remove or re-enable the account",
+        "Conduct a thorough audit of user accounts"
+      ],
+      "next_escalation": "Escalate to IT management for further review and action"
+    },
+    {
+      "user_id": "USR00090",
+      "username": "neha.o'brien",
+      "risk_score": 147.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "INACTIVE_ADMIN",
+          "details": "Admin account inactive for 147 days",
+          "severity": "HIGH",
+          "recommendation": "Immediately investigate and verify the account status, and consider revoking admin privileges if the account is no longer needed"
+        },
+        {
+          "finding": "HIGH_RISK_SCORE",
+          "details": "Risk score of 100.0 indicates a high-risk account",
+          "severity": "MEDIUM",
+          "recommendation": "Review and update the account's access controls and privileges to ensure they align with the user's current role and responsibilities"
+        }
+      ],
+      "blast_radius": {
+        "systems_at_risk": [
+          "Azure_AD",
+          "VPN",
+          "AD",
+          "PROD_DB"
+        ],
+        "estimated_records_exposed": 100000,
+        "gdpr_fine_exposure": "\u20ac20 million or 4% revenue",
+        "business_impact": "Potential data breach and reputational damage"
+      },
+      "compliance_violations": [
+        "NIST AC-2",
+        "GDPR Article 32",
+        "SOX 302"
+      ],
+      "confidence": 0.9,
+      "suggested_actions": [
+        "Investigate account inactivity",
+        "Review and update access controls",
+        "Consider revoking admin privileges"
+      ],
+      "next_escalation": "Escalate to CISO for further review and action"
+    }
+  ],
+  "event_explanations": [
+    {
+      "event_index": 0,
+      "user_id": "USR00150",
+      "username": "daniel.wagner",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 1,
+      "user_id": "USR00252",
+      "username": "nadia.singh",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 2,
+      "user_id": "USR00082",
+      "username": "arjun.hwang",
+      "risk_score": 100.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 3,
+      "user_id": "USR00036",
+      "username": "nicholas.harris",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 4,
+      "user_id": "USR00214",
+      "username": "ryan.sanchez",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 5,
+      "user_id": "USR00176",
+      "username": "nisha.sharma",
+      "risk_score": 100.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 6,
+      "user_id": "USR00011",
+      "username": "maria.o'brien",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 7,
+      "user_id": "USR00057",
+      "username": "zainab.jo",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 8,
+      "user_id": "USR00158",
+      "username": "arjun.sanchez",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 9,
+      "user_id": "USR00294",
+      "username": "kenneth.colombo",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 10,
+      "user_id": "USR00181",
+      "username": "george.smith",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 11,
+      "user_id": "USR00266",
+      "username": "robert.thomas",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 12,
+      "user_id": "USR00083",
+      "username": "ryan.thomas",
+      "risk_score": 100.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 13,
+      "user_id": "USR00087",
+      "username": "aditya.taylor",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 14,
+      "user_id": "USR00261",
+      "username": "nikhil.thomas",
+      "risk_score": 100.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 15,
+      "user_id": "USR00209",
+      "username": "nikhil.martinez",
+      "risk_score": 100.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 16,
+      "user_id": "USR00091",
+      "username": "steven.thompson",
+      "risk_score": 100.0,
+      "severity": "HIGH",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 17,
+      "user_id": "USR00101",
+      "username": "paul.hoffmann",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 18,
+      "user_id": "USR00207",
+      "username": "joseph.young",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    },
+    {
+      "event_index": 19,
+      "user_id": "USR00213",
+      "username": "riya.colombo",
+      "risk_score": 100.0,
+      "severity": "CRITICAL",
+      "findings": [
+        {
+          "finding": "ERROR",
+          "details": "Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}",
+          "severity": "LOW",
+          "recommendation": "Retry"
+        }
+      ],
+      "compliance_violations": [],
+      "confidence": 0.0,
+      "suggested_actions": [
+        "Re-run analysis"
+      ],
+      "next_escalation": "Manual review required"
+    }
+  ]
+}
